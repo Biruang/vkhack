@@ -66,9 +66,7 @@ class Home extends React.Component {
 			      </Div>
 		  </Group>				
 		  <Group title="Рейтинг друзей" >
-			<FixedLayout vertical="bottom" style={{ height: 160, overflowY: 'scroll' }}>
 			  		<ListFriends arrayUsers={arr}/>
-			</FixedLayout>
 		</Group>
         </Panel>
       </React.Fragment>
