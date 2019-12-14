@@ -48,17 +48,15 @@ class FormDeal extends React.Component {
                     type="text"
                     value={ name }
                     placeholder="Введите название"
-                    onChange={this.handleNameChange}
-                    maxLength='100'
-                    status={ name ? 'valid' : 'error'}
-                    bottom={ name ? '' : 'Введите название!'}
+                    onChange={this.onChange}
+                    maxLength='40'
+                    status={deal ? 'valid' : 'error'}
+                    bottom={deal ? '' : 'Введите название!'}
                     />
                     
                     <Textarea 
                     placeholder="Введите описание"
-                    maxLength="300"
-                    value={ description }
-                    onChange={this.handleDescriptionChange}
+                    maxLength="150"
                     />
                     
                     <Button onClick={this.onClick}>Сохранить</Button>

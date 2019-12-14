@@ -1,0 +1,8 @@
+.periodDiv{
+    text-align: center;
+}
+
+.periodBut:active {
+    background-color: #528bcc;
+    color: white;
+}

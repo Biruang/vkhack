@@ -1,0 +1,13 @@
+div .InfoRow__title {
+    color: black;
+}
+
+div .Progress {
+    background: var(--dynamic_red);
+    height:10px;
+}
+
+div .Progress__in {
+    background: var(--dynamic_green);
+    height:10px;
+}

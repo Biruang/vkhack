@@ -23,7 +23,7 @@ class Profile extends Component{
         return(
             <React.Fragment>
                 <Div className="carma-box">
-                    <div className={"carma " + this.colorStyleFromCarma()}>
+                    <div onClick={this.props.go} data-to="statistic" className={"carma " + this.colorStyleFromCarma()}>
                         {this.props.carma}
                     </div>
 
