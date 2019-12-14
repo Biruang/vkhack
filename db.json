@@ -1,9 +1,24 @@
 {
-    "user":{
-        "vk_id": "",
-        "carma": 0,
-        "newDealsCount": 0
-    },
+    "users":[
+        {
+            "id": 230353165,
+            "carma": 24,
+            "newDealsCount": 2,
+            "first_name":"Vas",
+            "last_name":"Das",
+            "photo":"https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1",
+            "friends": [230353142]
+        },
+        {
+            "id": 230353142,
+            "carma": 13,
+            "newDealsCount": 3,
+            "first_name":"Vam",
+            "last_name":"Dam",
+            "photo":"https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1",
+            "friends": [230353165]
+        }
+    ],
     "deals": [
         {
             "id": 1,
@@ -14,22 +29,6 @@
             "id": 2,
             "name": "ddd",
             "description": "ffdssd"
-        }
-    ],
-    "friends": [
-        {
-            "id":1928903,
-            "first_name":"Vas",
-            "last_name":"Das",
-            "photo":"https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1",
-            "karma":400
-        },
-        {
-            "id":1923243,
-            "first_name":"Vam",
-            "last_name":"Dam",
-            "photo":"https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1",
-            "karma":200
         }
     ],
     "statistics": {

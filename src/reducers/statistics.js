@@ -1,3 +1,5 @@
+
+
 const initialState = [
     {
         day_allPoints: 0,

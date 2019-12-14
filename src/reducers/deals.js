@@ -1,18 +1,25 @@
-const initialState = [
-    {
-        id: 1,
-        name: 'ddd',
-        description: 'ffdssd',
-    },
-    {
-        id: 2,
-        name: 'ddffd',
-        description: 'ffasdadssddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
-    },
-];
+const DEALS_FETCH_REQUEST = 'DEALS_FETCH_REQUEST';
+const DEALS_FETCH_SUCCESS = 'DEALS_FETCH_SUCCESS';
+const DEALS_FETCH_ERROR = 'DEALS_FETCH_ERROR';
+
+const initialState = {
+    data:[],
+    isLoading: false,
+    isError: false
+};
 
 const deals = (state = initialState, actions) => {
-    return state;
+    switch (actions.type) {
+        case DEALS_FETCH_REQUEST:
+            return {...state, isLoading: true};
+        case DEALS_FETCH_SUCCESS:
+            return {...state, isLoading: false, data: actions.payload};
+        case DEALS_FETCH_ERROR:
+            return {...state, isError: true};
+        default:
+            return state;
+    }
+
 };
 
 export default deals
