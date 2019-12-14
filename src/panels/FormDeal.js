@@ -40,14 +40,14 @@ class FormDeal extends React.Component {
                     value={deal}
                     placeholder="Введите название"
                     onChange={this.onChange}
-                    maxlength='100'
+                    maxLength='100'
                     status={deal ? 'valid' : 'error'}
                     bottom={deal ? '' : 'Введите название!'}
                     />
                     
                     <Textarea 
                     placeholder="Введите описание"
-                    maxlength="300"
+                    maxLength="300"
                     />
                     
                     <Button onClick={this.props.go} data-to="home">Сохранить</Button>
