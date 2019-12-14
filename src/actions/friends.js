@@ -26,7 +26,7 @@ export function fetchFriends(arrayId) {
                 })
         });
 
-        console.log(friends)
+        console.log(friends);
 
         dispatch({
             type: FRIENDS_FETCH_SUCCESS,

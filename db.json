@@ -32,26 +32,42 @@
         }
     ],
     "statistics": {
-        "day_allPoints": 0,
-        "day_positive": 0,
-        "week_allPoints": 0,
-        "week_positive": 0,
-        "month_allPoints": 0,
-        "month_positive": 0,
-        "year_allPoint": 0,
-        "year_positive": 0,
+        "day_allPoints": 100,
+        "day_positive": 20,
+        "week_allPoints": 300,
+        "week_positive": 80,
+        "month_allPoints": 600,
+        "month_positive": 500,
+        "year_allPoint": 1200,
+        "year_positive": 600,
         "history": [
             {
-                "id": 2,
-                "name": "ddd",
-                "description": "ffdssd",
-                "cost": 12
+                "id": 1,
+                "name":"w",
+                "date":1213131,
+                "type": "good",
+                "karma": 10
             },
             {
                 "id": 2,
-                "name": "ddd",
-                "description": "ffdssd",
-                "cost": 45
+                "name":"m",
+                "date":121313,
+                "type": "good",
+                "karma": 9
+            },
+            {
+                "id": 3,
+                "name":"y",
+                "date":12131442 ,
+                "type": "bad",
+                "karma": -54
+            },
+            {
+                "id": 4,
+                "name":"d",
+                "date":121314 ,
+                "type": "bad",
+                "karma": -7
             }
         ]
     }

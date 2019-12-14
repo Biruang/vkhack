@@ -50,8 +50,8 @@ class FormDeal extends React.Component {
                     placeholder="Введите название"
                     onChange={this.onChange}
                     maxLength='40'
-                    status={deal ? 'valid' : 'error'}
-                    bottom={deal ? '' : 'Введите название!'}
+                    status={name ? 'valid' : 'error'}
+                    bottom={name ? '' : 'Введите название!'}
                     />
                     
                     <Textarea 
