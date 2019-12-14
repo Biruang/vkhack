@@ -1,0 +1,58 @@
+{
+    "users":[
+        {
+            "id": 230353165,
+            "carma": 24,
+            "newDealsCount": 2,
+            "first_name":"Vas",
+            "last_name":"Das",
+            "photo":"https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1",
+            "friends": [230353142]
+        },
+        {
+            "id": 230353142,
+            "carma": 13,
+            "newDealsCount": 3,
+            "first_name":"Vam",
+            "last_name":"Dam",
+            "photo":"https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1",
+            "friends": [230353165]
+        }
+    ],
+    "deals": [
+        {
+            "id": 1,
+            "name": "ddd",
+            "description": "ffdssd"
+        },
+        {
+            "id": 2,
+            "name": "ddd",
+            "description": "ffdssd"
+        }
+    ],
+    "statistics": {
+        "day_allPoints": 0,
+        "day_positive": 0,
+        "week_allPoints": 0,
+        "week_positive": 0,
+        "month_allPoints": 0,
+        "month_positive": 0,
+        "year_allPoint": 0,
+        "year_positive": 0,
+        "history": [
+            {
+                "id": 2,
+                "name": "ddd",
+                "description": "ffdssd",
+                "cost": 12
+            },
+            {
+                "id": 2,
+                "name": "ddd",
+                "description": "ffdssd",
+                "cost": 45
+            }
+        ]
+    }
+}

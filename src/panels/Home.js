@@ -3,73 +3,27 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import Profile from "../components/profile";
-import ListFriends from "../components/listFriends";
-import { FixedLayout } from '@vkontakte/vkui';
-
-const arr = [
-	{
-		id:1928903,
-		first_name:'Vas',
-		last_name:'Das',
-		photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
-		karma:400
-	},
-	{
-		id:1890390,
-		first_name:'Vas',
-		last_name:'Das',
-		photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
-		karma:400
-	},
-	{
-		id:2389324,
-		first_name:'Vas',
-		last_name:'Das',
-		photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
-		karma:400
-	},
-	{
-		id:2389324,
-		first_name:'Vas',
-		last_name:'Das',
-		photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
-		karma:400
-	},
-	{
-		id:3241324,
-		first_name:'Vas',
-		last_name:'Das',
-		photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
-		karma:400
-	},
-	{
-		id:72432908,
-		first_name:'Vas',
-		last_name:'Das',
-		photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
-		karma:400
-	},
-]
+import ProfileContainer from '../containers/ProfileContainer'
+import FriendsListContainer from "../containers/friendsListContainer";
 
 class Home extends React.Component {
 	render(){
 		return(
-      <React.Fragment>
-        <Panel id={this.props.id}>
-          <PanelHeader>
-            VKarma
-          </PanelHeader>
-		  <Group>
-			      <Div>
-				      <Profile carma={2} newDealsCount={2} go={this.props.go}/>
-			      </Div>
-		  </Group>				
-		  <Group title="Рейтинг друзей" >
-			  		<ListFriends arrayUsers={arr}/>
-		</Group>
-        </Panel>
-      </React.Fragment>
+			<React.Fragment>
+				<Panel id={this.props.id}>
+					<PanelHeader>
+						VKarma
+					</PanelHeader>
+
+					<Group>
+						<Div>
+							<ProfileContainer newDealsCount={2} go={this.props.go}/>
+						</Div>
+					</Group>
+
+					<FriendsListContainer />
+				</Panel>
+			</React.Fragment>
 		)
 	}
 }
