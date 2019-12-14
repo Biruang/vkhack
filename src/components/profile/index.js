@@ -27,7 +27,7 @@ class Profile extends Component{
                         {this.props.carma}
                     </div>
 
-                    <div className="friends-deals">
+                    <div onClick={this.props.go} data-to="dealsList" className="friends-deals">
                         {this.props.newDealsCount}
                     </div>
                 </Div>

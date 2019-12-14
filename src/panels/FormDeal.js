@@ -13,7 +13,7 @@ class FormDeal extends React.Component {
         this.state = {
           deal: '',
           description: ''
-        }
+        };
         this.onChange = this.onChange.bind(this);
     }
 
@@ -23,7 +23,7 @@ class FormDeal extends React.Component {
       }
 
     render() {
-        const { deal, description} = this.state;
+        const { deal } = this.state;
         return(
             <Panel id={this.props.id}>
                 <PanelHeader
