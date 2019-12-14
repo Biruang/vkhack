@@ -13,7 +13,7 @@ class FormDeal extends React.Component {
         this.state = {
           deal: '',
           description: ''
-        }
+        };
         this.onChange = this.onChange.bind(this);
     }
 
@@ -23,7 +23,7 @@ class FormDeal extends React.Component {
       }
 
     render() {
-        const { deal, description} = this.state;
+        const { deal } = this.state;
         return(
             <Panel id={this.props.id}>
                 <PanelHeader
@@ -40,14 +40,14 @@ class FormDeal extends React.Component {
                     value={deal}
                     placeholder="Введите название"
                     onChange={this.onChange}
-                    maxlength='100'
+                    maxLength='100'
                     status={deal ? 'valid' : 'error'}
                     bottom={deal ? '' : 'Введите название!'}
                     />
                     
                     <Textarea 
                     placeholder="Введите описание"
-                    maxlength="300"
+                    maxLength="300"
                     />
                     
                     <Button onClick={this.props.go} data-to="home">Сохранить</Button>
