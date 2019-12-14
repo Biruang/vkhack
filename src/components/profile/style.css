@@ -1,0 +1,47 @@
+.carma-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carma{
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    font-size: 1.5em;
+    box-shadow: 0 0 15px rgba(0,0,0,0.35);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carma:hover,
+.carma:active,
+.friends-deals:hover,
+.friends-deals:active{
+    box-shadow: 0 0 15px rgba(0,0,0,0.55);
+}
+
+.carma-red{
+    border: 2px solid red;
+    background: mistyrose;
+}
+
+.carma-green{
+    border: 2px solid green;
+    background: darkseagreen;
+}
+
+.friends-deals{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    font-size: 1.5em;
+    box-shadow: 0 0 15px rgba(0,0,0,0.35);
+    background: gray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
