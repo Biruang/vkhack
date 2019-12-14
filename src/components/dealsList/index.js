@@ -1,34 +1,34 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Div from '@vkontakte/vkui/dist/components/Div/Div'
-import List from '@vkontakte/vkui/dist/components/List/List'
-import Deal from "./deal";
+import React from 'react';
+import List from '@vkontakte/vkui/dist/components/List/List';
+import PropTypes from 'prop-types';
+import Cell from "@vkontakte/vkui/dist/components/Cell/Cell";
+import Group from "@vkontakte/vkui/dist/components/Group/Group"
 
-function DealsListComponent(props) {
+class DealsLists extends React.Component {
 
-    const Deals = props.deals.map(deal => {
-        return(
-            <Deal key={deal.id} name={deal.name} description={deal.description}/>
-        )
-    })
+    render() {
+        const Cells = this.props.deals.map(deal => {
+            return <Cell expandable onClick={this.props.go} data-to="soloDeal" description={deal.description}>{deal.name}</Cell>
+        });
 
-    return(
-        <React.Fragment>
-            <Div>
+        return (
+            <Group>
                 <List>
-                    {Deals}
+                    {Cells}
                 </List>
-            </Div>
-        </React.Fragment>
-    )
+            </Group>
+        )
+    }
 }
 
-DealsListComponent.propTypes = {
-    deals:PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired
+DealsLists.propTypes = {
+    deals: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        first_name: PropTypes.string,
+        last_name: PropTypes.string,
+        photo: PropTypes.string,
+        karma: PropTypes.number
     }))
-}
+};
 
-export default DealsListComponent;
+export default DealsLists;
