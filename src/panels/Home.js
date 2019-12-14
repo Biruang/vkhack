@@ -25,7 +25,7 @@ class Home extends React.Component {
           </PanelHeader>
           <Group>
 			      <Div>
-				      <Profile carma={2} newDealsCount={2} go={go}/>
+				      <Profile carma={2} newDealsCount={2} go={this.props.go}/>
 			      </Div>
 		      </Group>
         </Panel>
