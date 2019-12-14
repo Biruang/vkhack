@@ -34,8 +34,7 @@ const App = () => {
 
 	return (
 		<View activePanel={activePanel} popout={popout}>
-			<Home id='home' fetchedUser={fetchedUser} go={go} />
-			<Persik id='persik' go={go} />
+			<Home id='home' fetchedUser={fetchedUser} go={go} back={false}/>
 		</View>
 	);
 }
