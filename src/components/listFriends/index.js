@@ -9,12 +9,10 @@ class ListFriends extends React.Component {
 
     render() {
         return (
-                <List>
-                    {this.props.arrayUsers.map(({ id, first_name, last_name, photo, karma }, i) => <Cell key={i}
-                        before={<Avatar src={photo} />}
-                        indicator={<Counter type="primary">{karma}</Counter>}
-                    >{first_name} {last_name}</Cell>)}
-                </List>
+            <List>
+                {this.props.arrayUsers.map(({ id, first_name, last_name, photo, karma }, i) =>
+                    <Cell key={i} before={<Avatar src={photo} />} indicator={<Counter type="primary">{karma}</Counter>}>{first_name} {last_name}</Cell>)}
+            </List>
         )
     }
 }
