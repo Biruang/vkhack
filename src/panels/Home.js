@@ -3,7 +3,7 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import Profile from "../components/profile";
+import ProfileContainer from '../containers/ProfileContainer'
 
 class Home extends React.Component {
 	render(){
@@ -15,7 +15,7 @@ class Home extends React.Component {
 					</PanelHeader>
 					<Group>
 						<Div>
-							<Profile carma={2} newDealsCount={2} go={this.props.go}/>
+							<ProfileContainer newDealsCount={2} go={this.props.go}/>
 						</Div>
 					</Group>
 				</Panel>

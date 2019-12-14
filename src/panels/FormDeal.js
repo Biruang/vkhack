@@ -20,7 +20,7 @@ class FormDeal extends React.Component {
     onChange(e) {
         const { name, value } = e.currentTarget;
         this.setState({ [name]: value });
-      }
+    }
 
     render() {
         const { deal } = this.state;
