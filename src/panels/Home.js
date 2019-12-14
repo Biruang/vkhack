@@ -3,7 +3,7 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import Profile from "../components/profile";
+import ProfileContainer from '../containers/ProfileContainer'
 import ListFriends from "../components/listFriends";
 import { FixedLayout } from '@vkontakte/vkui';
 
@@ -55,23 +55,23 @@ const arr = [
 class Home extends React.Component {
 	render(){
 		return(
-      <React.Fragment>
-        <Panel id={this.props.id}>
-          <PanelHeader>
-            VKarma
-          </PanelHeader>
-		  <Group>
-			      <Div>
-				      <Profile carma={2} newDealsCount={2} go={this.props.go}/>
-			      </Div>
-		  </Group>				
-		  <Group title="Рейтинг друзей" >
+			<React.Fragment>
+				<Panel id={this.props.id}>
+					<PanelHeader>
+						VKarma
+					</PanelHeader>
+					<Group>
+						<Div>
+							<ProfileContainer newDealsCount={2} go={this.props.go}/>
+						</Div>
+					</Group>
+      <Group title="Рейтинг друзей" >
 			<FixedLayout vertical="bottom" style={{ height: 160, overflowY: 'scroll' }}>
 			  		<ListFriends arrayUsers={arr}/>
 			</FixedLayout>
-		</Group>
-        </Panel>
-      </React.Fragment>
+      </Group>
+				</Panel>
+			</React.Fragment>
 		)
 	}
 }
