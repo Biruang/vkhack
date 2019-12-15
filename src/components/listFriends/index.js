@@ -5,16 +5,13 @@ import  Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Counter from '@vkontakte/vkui/dist/components/Counter/Counter';
 import PropTypes from 'prop-types';
 
-class ListFriends extends React.Component {
-
-    render() {
+function ListFriends(props){
         return (
             <List>
-                {this.props.arrayUsers.map(({ id, first_name, last_name, photo, carma }, i) =>
+                {props.arrayUsers.map(({ id, first_name, last_name, photo, carma }, i) =>
                     <Cell key={i} before={<Avatar src={photo} />} indicator={<Counter type="primary">{carma}</Counter>}>{first_name} {last_name}</Cell>)}
             </List>
         )
-    }
 }
 
 ListFriends.propTypes = {

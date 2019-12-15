@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button, Cell, Div, Group } from '@vkontakte/vkui';
+import { Button, Cell, Div, InfoRow } from '@vkontakte/vkui';
+import Icon24BrowserBack from '@vkontakte/icons/dist/24/browser_back';
+import Icon24BrowserForward from '@vkontakte/icons/dist/24/browser_forward';
 import './style.css';
 
 
@@ -22,20 +24,22 @@ class Period extends React.Component {
                 this.props.updatePeriod(cur-1);
             }
     }
-
     render() {
         const {arrPeriod,curIndex} = this.state;
         return(
-            <Group>
             <Cell 
-                before={<Button level="outline" className="periodBut" onClick={() => this.changePeriod('-')}> {"<"} </Button>}
-                asideContent={<Button level="outline" className="periodBut" onClick={() => this.changePeriod('+')}>{">"}</Button>}
+                before={<Button level="outline" className="periodBut" onClick={() => this.changePeriod('-')}> <Icon24BrowserBack/> </Button>}
+                asideContent={<Button level="outline" className="periodBut" onClick={() => this.changePeriod('+')}><Icon24BrowserForward/></Button>}
             >
                 <Div className="periodDiv">
-                    {arrPeriod[curIndex]}
+                    <Button 
+                        disabled
+                        align="center"
+                        level="outline" >
+                        {arrPeriod[curIndex]}
+                    </Button>
                 </Div>
             </Cell>
-        </Group>
         )
     }
 }

@@ -2,8 +2,6 @@ import React from 'react'
 import { connect as rconnect} from 'react-redux'
 import Profile from "../components/profile";
 import {InitUser} from "../actions/user";
-import connect from '@vkontakte/vk-connect';
-import {fetchFriends} from "../actions/friends";
 class ProfileContainer extends React.Component{
     constructor(props) {
         super(props);
@@ -13,15 +11,18 @@ class ProfileContainer extends React.Component{
         }
     }
 
+
     async getUserData(){
         let data = await connect.sendPromise("VKWebAppGetUserInfo");
         setTimeout(this.props.InitUser(data.id), 5000);
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         this.getUserData();
+        await this.props.InitUser()
         this.props.changeStyle(this.props.carma);
         console.log(this.props.carma)
+
     }
 
     render(){
@@ -38,8 +39,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    InitUser: id => dispatch(InitUser(id)),
-    fetchFriends: arrayId => dispatch(fetchFriends(arrayId))
+    InitUser: () => dispatch(InitUser()),
 });
 
 export default rconnect(mapStateToProps, mapDispatchToProps)(ProfileContainer)
