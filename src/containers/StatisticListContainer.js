@@ -7,7 +7,6 @@ import { fetchStatistics } from '../actions/statistics'
 class StatisticListContainer extends React.Component{
 
     componentDidMount() {
-        this.props.fetchStatistics()
     }
 
     render(){

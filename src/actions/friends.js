@@ -38,11 +38,13 @@ export function fetchFriends() {
                 })
         });
 
-        console.log(friends);
+        let array = [
+
+        ];
 
         dispatch({
             type: FRIENDS_FETCH_SUCCESS,
-            payload: friends
+            payload: array
         })
     }
 }
