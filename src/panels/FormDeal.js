@@ -11,19 +11,29 @@ class FormDeal extends React.Component {
         super(props);
     
         this.state = {
-          deal: '',
+          name: '',
           description: ''
         };
-        this.onChange = this.onChange.bind(this);
+        this.handleNameChange = this.handleNameChange.bind(this);
+        this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
     }
 
-    onChange(e) {
-        const { name, value } = e.currentTarget;
-        this.setState({ [name]: value });
+    handleNameChange(event) {
+        console.log(event.target.value);
+        this.setState({name: event.target.value, description: this.state.description});
+    }
+
+    handleDescriptionChange(event) {
+        console.log(event.target.value);
+        this.setState({ name: this.state.name, description: event.target.value});
+    }
+
+    onClick(){
+        console.log(this.state)
     }
 
     render() {
-        const { deal } = this.state;
+        const { name, description } = this.state;
         return(
             <Panel id={this.props.id}>
                 <PanelHeader
@@ -36,21 +46,21 @@ class FormDeal extends React.Component {
                 <FormLayout>
                     <Input
                     type="text"
-                    name="deal"
-                    value={deal}
+                    value={ name }
                     placeholder="Введите название"
                     onChange={this.onChange}
-                    maxLength='100'
-                    status={deal ? 'valid' : 'error'}
-                    bottom={deal ? '' : 'Введите название!'}
+                    maxLength='40'
+                    status={name ? 'valid' : 'error'}
+                    bottom={name ? '' : 'Введите название!'}
+                    onChange={this.handleNameChange}
                     />
                     
                     <Textarea 
                     placeholder="Введите описание"
-                    maxLength="300"
+                    maxLength="150"
                     />
                     
-                    <Button onClick={this.props.go} data-to="home">Сохранить</Button>
+                    <Button onClick={this.onClick}>Сохранить</Button>
                 </FormLayout>
             </Panel>
         )

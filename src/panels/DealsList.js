@@ -21,7 +21,7 @@ class DealsList extends React.Component {
                         Оцени других
                     </PanelHeader>
 
-                    <DealsListContainer go={this.props.go}/>
+                    <DealsListContainer />
                 </Panel>
             </React.Fragment>
         )
