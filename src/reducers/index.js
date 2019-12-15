@@ -5,9 +5,9 @@ import friends from "./friends";
 import statistics from "./statistics";
 
 
-export default combineReducers({
-    user,
-    deals,
-    friends,
-    statistics
-})
+export const rootReducer = combineReducers({
+    user: user,
+    deals: deals,
+    friends: friends,
+    statistics: statistics
+});

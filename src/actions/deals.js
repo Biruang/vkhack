@@ -1,14 +1,19 @@
+import connect from '@vkontakte/vk-connect'
+
 export const DEALS_FETCH_REQUEST = 'DEALS_FETCH_REQUEST';
 export const DEALS_FETCH_SUCCESS = 'DEALS_FETCH_SUCCESS';
 export const DEALS_FETCH_ERROR = 'DEALS_FETCH_ERROR';
 
 export function fetchDeals() {
-    return dispatch => {
+    return async dispatch => {
         dispatch({
             type: DEALS_FETCH_REQUEST
         });
 
-        fetch("http://localhost:3000/deals")
+        let data = await connect.sendPromise("VKWebAppGetUserInfo");
+        console.log(data);
+
+        fetch("http://astarott.beget.tech/" + data.id + "/acts", {mode: 'cors'})
             .then(data => {
                 return data.json()
             })
