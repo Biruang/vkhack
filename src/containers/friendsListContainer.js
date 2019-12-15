@@ -3,30 +3,21 @@ import { connect } from 'react-redux'
 import ListFriends from "../components/listFriends";
 import {FixedLayout} from "@vkontakte/vkui";
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
-import { fetchFriends } from "../actions/friends";
 
 class FriendsListContainer extends React.Component{
-
-    componentDidMount() {
-        this.props.fetchFriends(this.props.userFriends);
-    }
-
     render(){
         return(
             <Group title="Рейтинг друзей" >
-                <ListFriends arrayUsers={this.props.friendsArray}/>
+                <FixedLayout vertical="bottom" style={{ height: 160, overflowY: 'scroll' }}>
+                    <ListFriends arrayUsers={this.props.arrayUsers}/>
+                </FixedLayout>
             </Group>
         )
     }
 }
 
 const mapStateToProps = state => ({
-    userFriends: state.user.friends,
-    friendsArray: state.friends.data
+    arrayUsers: state.friends
 });
 
-const mapDispatchToProps = dispatch => ({
-    fetchFriends: arrayId => dispatch(fetchFriends(arrayId))
-});
-
-export default connect(mapStateToProps,mapDispatchToProps)(FriendsListContainer)
+export default connect(mapStateToProps)(FriendsListContainer)

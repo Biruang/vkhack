@@ -1,22 +1,50 @@
-import {FRIENDS_FETCH_ERROR, FRIENDS_FETCH_SUCCESS, FRIENDS_FETCH_REQUEST} from "../actions/friends";
-
-const initialState = {
-    data: [],
-    isLoading: false,
-    isError: false
-};
+const initialState = [
+    {
+        id:1928903,
+        first_name:'Vas',
+        last_name:'Das',
+        photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
+        karma:400
+    },
+    {
+        id:1890390,
+        first_name:'Vas',
+        last_name:'Das',
+        photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
+        karma:400
+    },
+    {
+        id:2389324,
+        first_name:'Vas',
+        last_name:'Das',
+        photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
+        karma:400
+    },
+    {
+        id:2389324,
+        first_name:'Vas',
+        last_name:'Das',
+        photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
+        karma:400
+    },
+    {
+        id:3241324,
+        first_name:'Vas',
+        last_name:'Das',
+        photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
+        karma:400
+    },
+    {
+        id:72432908,
+        first_name:'Vas',
+        last_name:'Das',
+        photo:'https://pp.userapi.com/c845121/v845121950/63c02/4hP61FL56YM.jpg?ava=1',
+        karma:400
+    },
+];
 
 const friends = (state = initialState, actions) => {
-    switch (actions.type) {
-        case FRIENDS_FETCH_REQUEST:
-            return {...state, isLoading: true};
-        case FRIENDS_FETCH_SUCCESS:
-            return {...state, isLoading: false, data: actions.payload};
-        case FRIENDS_FETCH_ERROR:
-            return {...state, isLoading: false, isError: true};
-        default:
-            return state;
-    }
+    return state;
 };
 
 export default friends
