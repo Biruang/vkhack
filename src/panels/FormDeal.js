@@ -9,57 +9,48 @@ import { FormLayout, Button, Textarea, Input } from '@vkontakte/vkui';
 class FormDeal extends React.Component {
     constructor(props) {
         super(props);
-    
+
         this.state = {
-          name: '',
-          description: ''
+            deal: '',
+            description: ''
         };
-        this.handleNameChange = this.handleNameChange.bind(this);
-        this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
+        this.onChange = this.onChange.bind(this);
     }
 
-    handleNameChange(event) {
-        console.log(event.target.value);
-        this.setState({name: event.target.value, description: this.state.description});
-    }
-
-    handleDescriptionChange(event) {
-        console.log(event.target.value);
-        this.setState({ name: this.state.name, description: event.target.value});
-    }
-
-    onClick(){
-        console.log(this.state)
+    onChange(e) {
+        const { name, value } = e.currentTarget;
+        this.setState({ [name]: value });
     }
 
     render() {
-        const { name, description } = this.state;
+        const { deal, description} = this.state;
         return(
             <Panel id={this.props.id}>
                 <PanelHeader
                     left={<HeaderButton onClick={this.props.go} data-to="home">
-                    <Icon24Back/>
+                        <Icon24Back/>
                     </HeaderButton>}
                 >
                     Добавить поступок
                 </PanelHeader>
                 <FormLayout>
                     <Input
-                    type="text"
-                    value={ name }
-                    placeholder="Введите название"
-                    onChange={this.onChange}
-                    maxLength='40'
-                    status={name ? 'valid' : 'error'}
-                    bottom={name ? '' : 'Введите название!'}
+                        type="text"
+                        name="deal"
+                        value={deal}
+                        placeholder="Введите название"
+                        onChange={this.onChange}
+                        maxLength='100'
+                        status={deal ? 'valid' : 'error'}
+                        bottom={deal ? '' : 'Введите название!'}
                     />
-                    
-                    <Textarea 
-                    placeholder="Введите описание"
-                    maxLength="150"
+
+                    <Textarea
+                        placeholder="Введите описание"
+                        maxLength="300"
                     />
-                    
-                    <Button onClick={this.onClick}>Сохранить</Button>
+
+                    <Button onClick={this.props.go} data-to="home">Сохранить</Button>
                 </FormLayout>
             </Panel>
         )
