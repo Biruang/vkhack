@@ -1,3 +1,31 @@
+.carma-rate{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("numbers_background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    font-size: 2em;
+}
+.addBut {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.profileBack {
+    background-repeat: no-repeat;
+}
+
+.homePage {
+    background-image: linear-gradient(#69DBFF, white);
+}
+
+.carma-rate img {
+    width:100%;
+}
+
 .carma-box{
     display: flex;
     justify-content: center;
@@ -7,12 +35,15 @@
     width: 8em;
     height: 8em;
     border-radius: 50%;
-    font-size: 1.5em;
     box-shadow: 0 0 15px rgba(0,0,0,0.35);
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.carma img {
+    width:100%;
 }
 
 .carma:hover,
@@ -22,24 +53,13 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.55);
 }
 
-.carma-red{
-    border: 2px solid red;
-    background: mistyrose;
-}
-
-.carma-green{
-    border: 2px solid green;
-    background: darkseagreen;
-}
 
 .friends-deals{
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
     border-radius: 50%;
-    font-size: 1.5em;
     box-shadow: 0 0 15px rgba(0,0,0,0.35);
-    background: gray;
-
+    margin: 15px;
     display: flex;
     justify-content: center;
     align-items: center;

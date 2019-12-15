@@ -11,8 +11,18 @@ class ProfileContainer extends React.Component{
         }
     }
 
+
+    async getUserData(){
+        let data = await connect.sendPromise("VKWebAppGetUserInfo");
+        setTimeout(this.props.InitUser(data.id), 5000);
+    }
+
     async componentDidMount() {
+        this.getUserData();
         await this.props.InitUser()
+        this.props.changeStyle(this.props.carma);
+        console.log(this.props.carma)
+
     }
 
     render(){
