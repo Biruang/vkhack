@@ -4,10 +4,10 @@ div .InfoRow__title {
 
 div .Progress {
     background: var(--dynamic_red);
-    height:10px;
+    height:20px;
 }
 
 div .Progress__in {
     background: var(--dynamic_green);
-    height:10px;
+    height:20px;
 }
