@@ -36,7 +36,7 @@ const App = () => {
 	};
 
 	const goTo = () => {
-		setActivePanel("dealsList")
+		setActivePanel("home")
 	}
 
 	return (
