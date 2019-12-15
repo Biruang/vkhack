@@ -17,7 +17,7 @@ const user = (state = initialState , action) => {
         }
         case INIT_USER_SUCCESS:{
             console.log(action.payload.carma)
-            return {...state, isLoading: false, carma: action.payload.carma, newDealsCount: action.payload.newDealsCount, friends: action.payload.friends}
+            return {...state, isLoading: false, carma: action.payload.score, /*newDealsCount: action.payload.newDealsCount, /*friends: action.payload.friends*/}
         }
         case INIT_USER_ERROR:{
             console.log(action.payload)

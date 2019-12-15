@@ -35,10 +35,14 @@ const App = () => {
 		setActivePanel(e.currentTarget.dataset.to);
 	};
 
+	const goTo = () => {
+		setActivePanel("dealsList")
+	}
+
 	return (
 		<View activePanel={activePanel} popout={popout}>
 			<Home id='home' fetchedUser={fetchedUser} go={go} back={false}/>
-			<FormDeal id="formDeal" go={go}/>
+			<FormDeal id="formDeal" go={goTo}/>
 			<DealsList id="dealsList" go={go} />
 			<StatisticListPanel id="statistic" go={go} />
 		</View>

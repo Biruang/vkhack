@@ -4,7 +4,7 @@ export const INIT_USER_REQUEST = 'INIT_USER_REQUEST';
 export const INIT_USER_SUCCESS = 'INIT_USER_SUCCESS';
 export const INIT_USER_ERROR = 'INIT_USER_ERROR';
 
-let url = "http://localhost:3000/users/";
+let url = "http://astarott.beget.tech/users/";
 
 export function InitUser() {
     return async dispatch => {
@@ -13,9 +13,8 @@ export function InitUser() {
         });
 
         let data = await connect.sendPromise("VKWebAppGetUserInfo");
-        let user = await fetch(url + data.id).then(data => {return data.json()});
 
-        fetch(url + user.id)
+        fetch(url + data.id)
             .then(data => {
                 return data.json()
             }).then(user => {
