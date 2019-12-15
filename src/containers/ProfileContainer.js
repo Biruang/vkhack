@@ -20,6 +20,7 @@ class ProfileContainer extends React.Component{
 
     componentDidMount() {
         this.getUserData();
+        this.props.changeStyle(this.props.carma);
         console.log(this.props.carma)
     }
 

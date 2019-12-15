@@ -52,6 +52,7 @@ class FormDeal extends React.Component {
                     maxLength='40'
                     status={name ? 'valid' : 'error'}
                     bottom={name ? '' : 'Введите название!'}
+                    onChange={this.handleNameChange}
                     />
                     
                     <Textarea 

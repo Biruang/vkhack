@@ -8,15 +8,13 @@ import { fetchFriends } from "../actions/friends";
 class FriendsListContainer extends React.Component{
 
     componentDidMount() {
-        this.props.fetchFriends(this.props.userFriends)
+        this.props.fetchFriends(this.props.userFriends);
     }
 
     render(){
         return(
             <Group title="Рейтинг друзей" >
-                <FixedLayout vertical="bottom" style={{ height: 160, overflowY: 'scroll' }}>
-                    <ListFriends arrayUsers={this.props.friendsArray}/>
-                </FixedLayout>
+                <ListFriends arrayUsers={this.props.friendsArray}/>
             </Group>
         )
     }

@@ -22,7 +22,7 @@ class StatisticList extends React.Component {
     }
 
     filterDeals(arr, p) {
-        var d = new Date();
+        /*var d = new Date();
         var first = new Date();
         var last = new Date();
         last.setHours(23,59,59,999);
@@ -44,7 +44,8 @@ class StatisticList extends React.Component {
                 count ++;
             }
         }
-        this.setState({goodDeals: count});
+        this.setState({goodDeals: count});*/
+        this.setState({arrayDeals: arr});
     }
 
     updatePoints(all, pos) {
@@ -74,7 +75,6 @@ class StatisticList extends React.Component {
     }
 
     render() {
-        console.log(this.props.history)
         return (
             <React.Fragment>
                 <Period updatePeriod={this.updatePeriod}/>
