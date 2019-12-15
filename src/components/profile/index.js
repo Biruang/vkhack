@@ -67,17 +67,18 @@ class Profile extends Component{
     render() {
         return(
             <React.Fragment>
-                <Div className="profileBack" style={{backgroundImage: this.changeClouds(), backgroundPosition: this.changePos()}}>
-                    <Div className="carma-rate">
-                        {this.props.carma}
+                <Div className="profileBack" style={{backgroundImage: this.changeClouds(), backgroundPosition: this.changePos(), backgroundSize: 'contain'}}>
+                    <Div className="carma-box">
+                        <div className="carma-rate">
+                            {this.props.carma}
+                        </div>
+                        <div onClick={this.props.go} data-to="dealsList" className="friends-deals">
+                            <img src='button_libra.svg'/>
+                        </div>
                     </Div>
                     <Div className="carma-box">
                         <div onClick={this.props.go} data-to="statistic" className="carma">
                             <img src={this.imgCarma()} />
-                        </div>
-
-                        <div onClick={this.props.go} data-to="dealsList" className="friends-deals">
-                            <img src='button_libra.svg'/>
                         </div>
                     </Div>
                     <Div className="addBut">

@@ -3,7 +3,8 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
 import HeaderButton from '@vkontakte/vkui/dist/components/HeaderButton/HeaderButton';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
-import { FormLayout, Button, Textarea, Input } from '@vkontakte/vkui';
+import { FormLayout, Button, Textarea, Input, Group } from '@vkontakte/vkui';
+import '../components/profile/style.css';
 
 
 class FormDeal extends React.Component {
@@ -43,7 +44,8 @@ class FormDeal extends React.Component {
                 >
                     Добавить поступок
                 </PanelHeader>
-                <FormLayout>
+
+                <FormLayout style={{marginTop: '5%'}}>
                     <Input
                     type="text"
                     value={ name }
@@ -60,7 +62,7 @@ class FormDeal extends React.Component {
                     maxLength="150"
                     />
                     
-                    <Button onClick={this.onClick}>Сохранить</Button>
+                    <Button align="center" onClick={this.onClick}>Сохранить</Button>
                 </FormLayout>
             </Panel>
         )
